@@ -17,7 +17,7 @@ import Product from "../components/screens/home/Product";
 export default function HomeScreen({ navigation }: NavigationProps) {
     return <Box flex p={0}  >
         <StatusBar backgroundColor={Color.gray3} />
-        <ScrollView style={{ flex: 1, backgroundColor: Color.white }}>
+        <ScrollView style={{ flex: 1 }}>
             <Banner />
             <Row p={8} mt={15} mb={15} >
                 <Text color={Color.black} fontSize={22} fontWeight="600" w={'70%'} >Plants</Text>
@@ -28,8 +28,8 @@ export default function HomeScreen({ navigation }: NavigationProps) {
                 keyExtractor={(item, index): string => index.toString()}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
-                renderItem={({ item } : {item : any}) => (
-                    <Product item={item} navigation={{navigation}} />
+                renderItem={({ item }: { item: any }) => (
+                    <Product item={item} navigation={{ navigation }} />
                 )}
                 ListFooterComponent={<Row p={8} h={50} justifyContent="flex-end"  >
                     <Text color={Color.black} style={{ textDecorationLine: 'underline', }} >See More</Text>
@@ -46,8 +46,8 @@ export default function HomeScreen({ navigation }: NavigationProps) {
                 keyExtractor={(item, index): string => index.toString()}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
-                renderItem={({ item } : {item : any}) => (
-                    <Product item={item} navigation={{navigation}} />
+                renderItem={({ item }: { item: any }) => (
+                    <Product item={item} navigation={{ navigation }} />
                 )}
                 ListFooterComponent={<Row p={8} h={50} justifyContent="flex-end"  >
                     <Text color={Color.black} style={{ textDecorationLine: 'underline', }} >See More</Text>
@@ -60,7 +60,7 @@ export default function HomeScreen({ navigation }: NavigationProps) {
             </Row>
             <Center mb={16}>
                 <Row w={'80%'} bg={Color.gray3} h={height('15')} rounded={8} >
-                    <Box w={'60%'} p={5} > 
+                    <Box w={'60%'} p={5} >
                         <Text color={Color.black} fontSize={16} fontWeight="600" >Lemon Balm Grow Kit </Text>
                         <Text color={Color.gray2} >Include: Lemon Balm seeds, dung, Planta pot, marker. </Text>
                     </Box>
